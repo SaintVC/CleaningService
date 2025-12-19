@@ -62,72 +62,60 @@ section {
     color: #2E7D32;
 }
 
-/* Imagen contacto */
+/* ===== CONTACTO ===== */
+
 .imagenContacto {
     width: 100%;
-    height: auto; /* CLAVE */
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
     display: block;
-}
-
-/* CONTENEDOR CONTACTO */
-.contacto-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-/* Cuadro info */
-.CuadroInfo {
-    background-color: rgb(206, 247, 234);
-    border-radius: 15px;
-    padding: 20px;
-    width: 280px;
-    text-align: center;
+    margin: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Icono */
-.Icono-Phone {
-    width: 50px;
-    margin-bottom: 10px;
+/* Contenedor del cuadro (envuelve CuadroInfo en el HTML si puedes) */
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
 }
 
-/* Botón contacto */
-.contact-btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-}
-.contact-btn:hover {
-    background-color: #2E7D32;
-}
+/* Cuadro de información */
+.CuadroInfo {
+    background-color: rgb(206, 247, 234);
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: default;
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+    width: 100%;
+    max-width: 320px;
     padding: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+.CuadroInfo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.Icono-Phone {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (min-width: 1024px) {
+    .contacto-contenedor {
+        padding: 80px 20px;
     }
 
-    nav a {
-        display: block;
-        border-bottom: 1px solid #444;
-    }
-
-    .services {
-        flex-direction: column;
-        align-items: center;
+    .CuadroInfo {
+        max-width: 400px;
     }
 }
